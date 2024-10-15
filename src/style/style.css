@@ -6,6 +6,8 @@
   --blue: #000520;
   --white: #fff;
   --gold: #dfad60;
+  --black: #131313;
+  --grey: #323232;
 }
 
 /*---------- Обнуление --------*/
@@ -101,47 +103,82 @@ input:-webkit-autofill:focus {
 
 .container {
   width: 100%;
-  max-width: 1640px;
+  max-width: 1480px;
   margin: 0 auto;
-  padding: 50px 20px;
 }
 @media (max-width: 768px) {
   .container {
+    padding: calc(16px + 23.8 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding: calc(16px + 14 * 0.0520833333vw);
+  }
+}
+@media (max-width: 768px) {
+  .container.padding {
     padding-top: calc(25px + 42.5 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container.padding {
     padding-top: calc(25px + 25 * 0.0520833333vw);
   }
 }
 @media (max-width: 768px) {
-  .container {
+  .container.padding {
     padding-bottom: calc(25px + 42.5 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container.padding {
     padding-bottom: calc(25px + 25 * 0.0520833333vw);
   }
 }
 @media (max-width: 768px) {
-  .container {
+  .container.padding {
     padding-left: calc(16px + 23.8 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container.padding {
     padding-left: calc(16px + 14 * 0.0520833333vw);
   }
 }
 @media (max-width: 768px) {
-  .container {
+  .container.padding {
     padding-right: calc(16px + 23.8 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container.padding {
     padding-right: calc(16px + 14 * 0.0520833333vw);
+  }
+}
+.container.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.container.flex.reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.gold_title {
+  color: var(--gold);
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .gold_title {
+    font-size: calc(37px + 22.1 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  .gold_title {
+    font-size: calc(37px + 13 * 0.0520833333vw);
   }
 }/*# sourceMappingURL=style.css.map */

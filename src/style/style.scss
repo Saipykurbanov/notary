@@ -6,6 +6,8 @@
     --blue: #000520;
     --white: #fff;
     --gold: #dfad60;
+    --black: #131313;
+    --grey: #323232;
 }
 
 /*---------- Обнуление --------*/
@@ -59,14 +61,33 @@ input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s;
 }
 
-.container {
-    width: 100%;
-    max-width: 1640px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    @include adaptiveProperty(padding-top, 50, 25);
-    @include adaptiveProperty(padding-bottom, 50, 25);
-    @include adaptiveProperty(padding-left, 30, 16);
-    @include adaptiveProperty(padding-right, 30, 16);
+.container { 
+    width: 100%; 
+    max-width: 1480px; 
+    margin: 0 auto; 
+    @include adaptiveProperty(padding, 30, 16); 
+    &.padding { 
+        @include adaptiveProperty(padding-top, 50, 25); 
+        @include adaptiveProperty(padding-bottom, 50, 25); 
+        @include adaptiveProperty(padding-left, 30, 16); 
+        @include adaptiveProperty(padding-right, 30, 16); 
+    } 
+    &.flex { 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 20px; 
+        flex-wrap: wrap; 
+        &.reverse { 
+            flex-wrap: wrap-reverse; 
+        } 
+    } 
+}
+
+.gold_title {
+    @include adaptiveFont(50, 37);
+    color: var(--gold);
+    line-height: 1;
+    text-transform: uppercase;
 }
 

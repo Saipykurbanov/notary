@@ -18,6 +18,7 @@ const About = ({lang}) => {
 
                 <div className="offer">{lang.offer}</div>
             </div>
+            
         </div>
     );
 };

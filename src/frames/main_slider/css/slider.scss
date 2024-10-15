@@ -3,74 +3,187 @@
 .main_slider {
     position: relative;
     width: 100%;
-    height: 100dvh;
-    background-color: var(--blue);
-    min-height: 600px;
+    min-height: 100dvh;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    @include adaptiveProperty(padding, 50, 20);
-    .slide {
+    flex-direction: column;
+    @include adaptiveProperty(padding-top, 160, 100);
+    .background {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        transform: translateX(100%);
-        background-color: var(--blue);
-        transition: 0.8s;
-        &.active {
-            transform: translateX(0);
-        }
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.15;
+        z-index: 1;
     }
-    .button_block {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        z-index: 30;
-        button {
-            position: relative;
-            width: 60px;
-            height: 20px;
-            @include adaptiveProperty(width, 70, 40);
-            display: flex;
+    .container.wrapper {
+        position: relative;
+        gap: 10dvh; 
+        margin: auto;
+        z-index: 2;
+        @include mediaMaxWidth(991) {
+            flex-direction: column-reverse;
             align-items: center;
-            @include mediaMinWidth(992) {
-                &:hover {
-                    .main {
+            gap: 10px;
+        }
+        .slider {
+            flex: 1;
+            max-width: 650px;
+            .slide {
+                opacity: 0;
+                display: none;
+                animation: Open 1s forwards;
+                @include adaptiveProperty(padding-bottom, 50, 25);
+                &.active {
+                    display: block;
+                }
+                .title {
+                    text-transform: uppercase;
+                    @include adaptiveFont(48, 35);
+                    color: var(--gold);
+                    width: min-content;
+                    @include adaptiveProperty(margin-bottom, 50, 25);
+                    line-height: 1.2em;
+                }
+                .description {
+                    @include adaptiveFont(20, 18);
+                    color: var(--blue);
+                    line-height: 1.2;
+                    @include adaptiveProperty(margin-bottom, 30, 15);
+                    word-break: break-word;
+                    hyphens: auto;
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        
+                    }
+                    &::-webkit-scrollbar-thumb {
                         background-color: var(--gold);
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .button_block {
+                width: max-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                z-index: 30;
+                button {
+                    position: relative;
+                    width: 60px;
+                    height: 20px;
+                    @include adaptiveProperty(width, 70, 40);
+                    display: flex;
+                    align-items: center;
+                    @include mediaMinWidth(992) {
+                        &:hover {
+                            .main {
+                                background-color: var(--gold);
+                                .arrow {
+                                    background-color: var(--gold);
+                                }
+                            }
+                        }
+                    }
+                    .main {
+                        position: relative;
+                        width: 100%;
+                        height: 2px;
+                        background-color: var(--blue);
+                        transition: 0.4s;
                         .arrow {
-                            background-color: var(--gold);
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            width: 40%;
+                            height: 2px;
+                            transform: translateY(-50%) rotate(20deg);    
+                            transform-origin: center left;
+                            background-color: var(--blue);
+                            transition: 0.4s;
+                            &.right {
+                                right: 0;
+                                left: auto;
+                                transform: translateY(-50%) rotate(20deg); 
+                                transform-origin: center right;
+                            }
                         }
                     }
                 }
             }
-            .main {
-                position: relative;
-                width: 100%;
-                height: 2px;
-                background-color: var(--white);
-                transition: 0.4s;
-                .arrow {
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    width: 40%;
-                    height: 2px;
-                    transform: translateY(-50%) rotate(20deg);    
-                    transform-origin: center left;
-                    background-color: var(--white);
-                    transition: 0.4s;
-                    &.right {
-                        right: 0;
-                        left: auto;
-                        transform: translateY(-50%) rotate(20deg); 
-                        transform-origin: center right;
-                    }
+        }
+        .specialist {
+            position: relative;
+            @include adaptiveProperty(width, 585, 290);
+            @include adaptiveProperty(height, 585, 290);
+            border-right: 10px solid var(--gold);
+            border-bottom: 10px solid var(--gold);
+            .notary_img {
+                position: absolute;
+                bottom: 0;
+                right: 5%;
+                width: 65%;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60%;
+                height: 10px;
+                background-color: var(--gold);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                height: 18%;
+                background-color: var(--gold);
+            }
+            .info_block {
+                position: absolute;
+                left: -30px;
+                bottom: 22%;
+                width: min-content;
+                @include mediaMaxWidth (576) {
+                    left: -10px;
+                }
+                .name {
+                    @include adaptiveFont(70, 30);
+                    color: var(--blue);
+                    font-weight: 600;
+                }
+                .position {
+                    @include adaptiveFont(34, 15);
+                    color: var(--gold);
+                    font-weight: 500;
                 }
             }
         }
     }
+    .contacts_layer {
+        position: relative;
+        background-color: var(--blue);
+        z-index: 2;
+        .container {
+            justify-content: flex-start;
+            @include adaptiveProperty(gap, 50, 20);
+        }
+        .contacts_item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include adaptiveFont(25, 22);
+        }
+    }
 }
+
+

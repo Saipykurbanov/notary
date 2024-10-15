@@ -22,9 +22,8 @@
 .main_button.white {
   color: var(--white);
 }
-.main_button .content {
-  transition: 0.4s;
-  mix-blend-mode: difference;
+.main_button.fill {
+  background-color: var(--gold);
 }
 .main_button::before {
   content: "";
@@ -36,10 +35,16 @@
   background-color: var(--gold);
   z-index: -1;
   transform: translateX(-100%);
-  transition: 0.6s;
+  transition: 0.4s;
 }
 @media screen and (min-width: 992px) {
+  .main_button:hover {
+    color: var(--blue);
+  }
   .main_button:hover::before {
     transform: translateX(0);
   }
+}
+.main_button .content {
+  transition: 0.5s;
 }/*# sourceMappingURL=button.css.map */

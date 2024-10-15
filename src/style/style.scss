@@ -3,7 +3,7 @@
 
 :root {
     --main-font: "Source Sans 3", sans-serif;
-    --blue: #000520;
+    --blue: #131313;
     --white: #fff;
     --gold: #dfad60;
 }
@@ -29,7 +29,7 @@ html,body{
 	max-width: 100%;
 	min-width: 320px;
 	font-weight: 400;
-	line-height: 1em;
+	line-height: 1;
 	font-size: 14px;
     font-family: var(--main-font);
 	-ms-text-size-adjust: 100%;
@@ -61,12 +61,32 @@ input:-webkit-autofill:focus {
 
 .container {
     width: 100%;
-    max-width: 1640px;
+    max-width: 1480px;
     margin: 0 auto;
-    padding: 50px 20px;
-    @include adaptiveProperty(padding-top, 50, 25);
-    @include adaptiveProperty(padding-bottom, 50, 25);
-    @include adaptiveProperty(padding-left, 30, 16);
-    @include adaptiveProperty(padding-right, 30, 16);
+    @include adaptiveProperty(padding, 30, 16);
+    &.padding {
+        @include adaptiveProperty(padding-top, 50, 25);
+        @include adaptiveProperty(padding-bottom, 50, 25);
+        @include adaptiveProperty(padding-left, 30, 16);
+        @include adaptiveProperty(padding-right, 30, 16);
+    }
+    &.flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        &.reverse {
+            flex-wrap: wrap-reverse;
+        }
+    }
 }
 
+@keyframes Open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

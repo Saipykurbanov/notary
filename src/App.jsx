@@ -12,7 +12,7 @@ function App() {
 
       <Header lang={lang.header}/>
 
-      <MainSlider lang={lang.slider}/>
+      <MainSlider lang={lang.home}/>
 
     </main>
   )

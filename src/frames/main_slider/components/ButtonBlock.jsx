@@ -1,14 +1,14 @@
 import React from 'react';
 
-const ButtonBlock = () => {
+const ButtonBlock = ({nextPage, prevPage}) => {
     return (
         <div className="button_block">
-            <button>
+            <button onClick={prevPage}>
                 <div className="main">
                     <span className="arrow"></span>
                 </div>
             </button>
-            <button>
+            <button onClick={nextPage}>
                 <div className="main">
                     <span className="arrow right"></span>
                 </div>

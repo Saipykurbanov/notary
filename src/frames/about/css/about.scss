@@ -1,0 +1,62 @@
+@import './../../../style/common';
+
+.about_block {
+    display: flex;
+    width: 100%;
+
+    @include mediaMaxWidth(700) {
+        flex-direction: column;
+    }
+
+    .description_wrapper {
+        flex: 1;
+
+        .description {
+            min-height: 50dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            max-width: 740px;
+            @include adaptiveProperty(gap, 35, 20); 
+            @include adaptiveProperty(padding-left, 30, 16); 
+            @include adaptiveProperty(padding-right, 30, 16); 
+            @include adaptiveProperty(padding-top, 70, 40); 
+            @include adaptiveProperty(padding-bottom, 70, 40); 
+            margin-left: auto;
+            background: var(--white);
+    
+            .about__description {
+                max-width: 620px;
+                @include adaptiveFont(18, 14);
+                color: var(--black);
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .offer_block {
+        min-height: 50dvh;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: var(--grey);
+        font-size: 64px;
+        @include adaptiveFont(64, 50);
+        line-height: 1;
+        color: var(--gold);
+        flex-direction: column;
+        @include adaptiveProperty(padding-left, 30, 16); 
+        @include adaptiveProperty(padding-right, 30, 16); 
+
+        .logo {
+
+        }
+
+        .offer {
+
+        }
+    }
+}

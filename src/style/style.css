@@ -6,6 +6,8 @@
   --blue: #131313;
   --white: #fff;
   --gold: #dfad60;
+  --black: #131313;
+  --grey: #323232;
 }
 
 /*---------- Обнуление --------*/
@@ -165,11 +167,26 @@ input:-webkit-autofill:focus {
   flex-wrap: wrap-reverse;
 }
 
+
 @keyframes Open {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+}
+.gold_title {
+  color: var(--gold);
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .gold_title {
+    font-size: calc(37px + 22.1 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  .gold_title {
+    font-size: calc(37px + 13 * 0.0520833333vw);
   }
 }/*# sourceMappingURL=style.css.map */

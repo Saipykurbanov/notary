@@ -28,7 +28,30 @@ const en = {
         offer: 'OR OFFER'
     },
     services: {
-        
+        title: 'Services',
+        items: [
+            {
+                title: 'Tax Preparation',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.'
+            },
+            {
+                title: ' ITIN Service',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+            {
+                title: 'Notary Service',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+            {
+                title: 'Auditing Service',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+            {
+                title: 'Tax Preparation',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+        ],
+        button: 'Other accounting services',
     }
 }
 

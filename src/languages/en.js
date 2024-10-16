@@ -26,6 +26,9 @@ const en = {
               forward to being your preferred notary service.
         `,
         offer: 'OR OFFER'
+    },
+    services: {
+        
     }
 }
 

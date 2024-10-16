@@ -22,8 +22,13 @@
 .main_button.white {
   color: var(--white);
 }
-.main_button.fill {
-  background-color: var(--gold);
+.main_button.fill::before {
+  transform: translateX(0%);
+}
+@media screen and (min-width: 992px) {
+  .main_button.fill:hover::before {
+    transform: translateX(100%);
+  }
 }
 .main_button::before {
   content: "";

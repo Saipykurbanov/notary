@@ -1,0 +1,45 @@
+@import './../../../style/common';
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--blue);
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier( 0.895, 0.03, 0.685, 0.22 );
+    .logo {
+        opacity: 0;
+        @include adaptiveFont(100, 50);
+        animation: Open 2s forwards;
+        //animation-delay: 1s;
+    }
+    .name {
+        position: relative;
+        opacity: 0;
+        transform: translateX(-80%);
+        animation: Name 1s forwards;
+        color: var(--gold);
+        width: max-content;
+        animation-delay: 1s;
+    }
+    &.close {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes Name {
+    0% {
+        opacity: 0;
+        transform: translateX(-80%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}

@@ -38,7 +38,7 @@
             .slide {
                 opacity: 0;
                 display: none;
-                animation: Open 1s forwards;
+                animation: OpenSlide 1.5s forwards;
                 @include adaptiveProperty(padding-bottom, 50, 25);
                 &.active {
                     display: block;

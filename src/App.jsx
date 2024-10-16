@@ -5,6 +5,8 @@ import en from './languages/en';
 import About from './frames/about/About';
 import Services from './frames/services/Services';
 import Contacts from './frames/contacts/Contacts';
+import Menu from './frames/menu/Menu';
+import Loading from './components/loading/Loading';
 
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
 
   return (
     <main>
+
+      <Loading />
 
       <Header lang={lang.header}/>
 
@@ -22,6 +26,8 @@ function App() {
       <Services lang={lang.services}/>
 
       <Contacts lang={lang.contacts}/>
+
+      <Menu lang={lang.header}/>
 
     </main>
   )

@@ -12,7 +12,16 @@
         color: var(--white);
     }
     &.fill {
-        background-color: var(--gold);
+        &::before {
+            transform: translateX(0%);
+        }
+        @include mediaMinWidth(992) {
+            &:hover {
+                &::before {
+                    transform: translateX(100%);
+                }
+            }
+        }
     }
     &::before {
         content: '';

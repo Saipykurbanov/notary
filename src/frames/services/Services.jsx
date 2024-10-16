@@ -4,14 +4,14 @@ import Button from '../../components/button/Button';
 
 const Services = ({ lang }) => {
     return (
-        <div className='services_block'>
+        <div className='services_block' id='#services'>
             <div className="container padding">
                 <h2 className="gold_title">{lang.title}</h2>
 
                 <div className="service__grid">
 
-                    {lang?.items?.map(el => (
-                        <div className="service__item">
+                    {lang?.items?.map((el, i) => (
+                        <div className="service__item" key={i}>
                             <h3>{el.title}</h3>
                             
                             <div className="line"></div>

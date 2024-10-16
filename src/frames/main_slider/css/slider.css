@@ -54,7 +54,7 @@
 .main_slider .container.wrapper .slider .slide {
   opacity: 0;
   display: none;
-  animation: Open 1s forwards;
+  animation: OpenSlide 1.5s forwards;
 }
 @media (max-width: 768px) {
   .main_slider .container.wrapper .slider .slide {

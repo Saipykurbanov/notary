@@ -11,9 +11,8 @@
     &.white {
         color: var(--white);
     }
-    .content {
-        transition: 0.4s;
-        mix-blend-mode: difference;
+    &.fill {
+        background-color: var(--gold);
     }
     &::before {
         content: '';
@@ -25,13 +24,17 @@
         background-color: var(--gold);
         z-index: -1;
         transform: translateX(-100%);
-        transition: 0.6s;
+        transition: 0.4s;
     }
     @include mediaMinWidth(992) {
         &:hover {
+            color: var(--blue);
             &::before {
                 transform: translateX(0);
             }
         }
+    }
+    .content {
+        transition: 0.5s;
     }
 }

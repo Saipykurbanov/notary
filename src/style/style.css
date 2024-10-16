@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 :root {
   --main-font: "Source Sans 3", sans-serif;
-  --blue: #000520;
+  --blue: #131313;
   --white: #fff;
   --gold: #dfad60;
   --black: #131313;
@@ -41,7 +41,7 @@ html, body {
   max-width: 100%;
   min-width: 320px;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1;
   font-size: 14px;
   font-family: var(--main-font);
   -ms-text-size-adjust: 100%;
@@ -167,6 +167,14 @@ input:-webkit-autofill:focus {
   flex-wrap: wrap-reverse;
 }
 
+
+@keyframes Open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+}
 .gold_title {
   color: var(--gold);
   line-height: 1;

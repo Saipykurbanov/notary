@@ -16,6 +16,9 @@ const Header = ({lang}) => {
                 <div className="button_block">
                     <Button mode={'white'} content={lang.button}/>
                 </div>
+                <div className="burger">
+                    <span></span><span></span>
+                </div>
             </div>
         </header>
     );

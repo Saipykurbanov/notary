@@ -6,7 +6,7 @@ const SlideItem = ({el, page, number}) => {
         <div className={`slide ${page === number ? 'active' : ''}`}>
             <h2 className="title">{el.title}</h2>
             <div className="description">{el.description}</div>
-            {el.link ? <a href=""><Button mode={'fill'} content={el.button}/></a> : <></>}
+            {el.link ? <a href={el.link}><Button mode={'fill'} content={el.button}/></a> : <></>}
         </div>
     );
 };

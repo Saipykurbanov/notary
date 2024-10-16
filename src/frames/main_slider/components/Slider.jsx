@@ -7,11 +7,19 @@ const Slider = ({slider}) => {
     const [page, setPage] = useState(1)
 
     const nextPage = () => {
-        setPage(prev => prev + 1)
+        if(page > slider.length - 1) {
+            setPage(1)
+        } else {
+            setPage(prev => prev + 1)
+        }
     }
 
     const prevPage = () => {
-        setPage(prev => prev - 1)
+        if(page < 2) {
+            setPage(slider.length)
+        } else {
+            setPage(prev => prev - 1)
+        }
     }
 
     return (

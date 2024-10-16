@@ -14,13 +14,13 @@ const en = {
                 title: 'Notary Organization',
                 description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals.',
                 button: 'Contacts',
-                link: '/'
+                link: '/#contacts'
             },
             {
                 title: 'Notary Organization2',
-                description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals. At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals.',
-                button: 'Site',
-                link: '/'
+                description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals. At Empire Tax Advisors, we understand that managing your finances can be a daunting task.',
+                button: 'Our services',
+                link: '/#services'
             },
         ],
         specialist: {

@@ -24,14 +24,17 @@
         gap: 10dvh; 
         margin: auto;
         z-index: 2;
+        align-items: normal;
         @include mediaMaxWidth(991) {
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
             gap: 10px;
         }
         .slider {
             flex: 1;
             max-width: 650px;
+            display: flex;
+            flex-direction: column;
             .slide {
                 opacity: 0;
                 display: none;
@@ -47,14 +50,19 @@
                     width: min-content;
                     @include adaptiveProperty(margin-bottom, 50, 25);
                     line-height: 1.2em;
+                    @include mediaMaxWidth(991) {
+                        width: 100%;
+                        text-align: center;
+                    }
                 }
                 .description {
-                    @include adaptiveFont(20, 18);
+                    @include adaptiveFont(20, 16);
                     color: var(--blue);
                     line-height: 1.2;
                     @include adaptiveProperty(margin-bottom, 30, 15);
                     word-break: break-word;
                     hyphens: auto;
+                    padding: 5px 0;
                     &::-webkit-scrollbar {
                         width: 5px;
                     }
@@ -74,6 +82,7 @@
                 justify-content: center;
                 gap: 20px;
                 z-index: 30;
+                margin-top: auto;
                 button {
                     position: relative;
                     width: 60px;

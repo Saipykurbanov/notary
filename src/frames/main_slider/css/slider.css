@@ -33,7 +33,7 @@
 }
 .main_slider .container.wrapper {
   position: relative;
-  gap: 10dvh;
+  gap: 10dvw;
   margin: auto;
   z-index: 2;
   align-items: normal;
@@ -129,13 +129,6 @@
   .main_slider .container.wrapper .slider .slide .description {
     margin-bottom: calc(15px + 15 * 0.0520833333vw);
   }
-}
-.main_slider .container.wrapper .slider .slide .description::-webkit-scrollbar {
-  width: 5px;
-}
-.main_slider .container.wrapper .slider .slide .description::-webkit-scrollbar-thumb {
-  background-color: var(--gold);
-  border-radius: 10px;
 }
 .main_slider .container.wrapper .slider .button_block {
   width: -moz-max-content;

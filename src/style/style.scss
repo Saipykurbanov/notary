@@ -8,6 +8,8 @@
     --gold: #dfad60;
     --black: #131313;
     --grey: #323232;
+    --red: red;
+    --error: rgb(24, 3, 3);
 }
 
 /*---------- Обнуление --------*/
@@ -82,6 +84,17 @@ input:-webkit-autofill:focus {
             flex-wrap: wrap-reverse; 
         } 
     } 
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-track {
+    
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 10px;
 }
 
 .gold_title {

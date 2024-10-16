@@ -1,0 +1,94 @@
+@import './../../../style/common';
+
+.contacts_frame {
+    width: 100%;
+    .container {
+        .offer {
+            @include adaptiveProperty(margin-top, 40, 20);
+            @include adaptiveFont(24, 20);
+            color: var(--blue);
+        }
+        .contacts_wrapper {
+            display: flex;
+            gap: 10dvw;
+            @include adaptiveProperty(margin-top, 60, 20);
+            @include mediaMaxWidth(991) {
+                gap: 20px;
+            }
+            @include mediaMaxWidth(768) {
+                flex-direction: column-reverse;
+            }
+            .address {
+                color: var(--blue);
+                .address_wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include mediaMaxWidth(768) {
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        justify-content: space-around;
+                    }
+                    h3 {
+                        @include adaptiveFont(30, 25);
+                        margin-bottom: 5px;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        width: max-content;
+                        @include adaptiveFont(24, 20);
+                        white-space: nowrap;
+                    }
+                }
+                .messangers {
+                    display: flex;
+                    align-items: center;
+                    @include adaptiveProperty(gap, 20, 10);
+                    @include adaptiveProperty(margin-top, 30, 20);
+                    @include mediaMaxWidth(768) {
+                        width: 100%;    
+                        justify-content: center;
+                    }
+                }   
+            }
+
+            form {
+                flex: 10;
+                .inputs_block {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    @include adaptiveProperty(column-gap, 50, 10);
+                    @include adaptiveProperty(row-gap, 25, 10);
+                    @include adaptiveProperty(margin-bottom, 25, 10);
+                    @include mediaMaxWidth(556) {
+                        grid-template-columns: 1fr;
+                    }
+                    input {
+                        background-color: var(--blue);
+                        border: 2px solid var(--gold);
+                        @include adaptiveFont(20, 16);
+                        @include adaptiveProperty(padding, 20, 10);
+                        color: var(--white);
+                        transition: 0.4s;
+                        &.error {
+                            border: 2px solid var(--red);
+                            background-color: var(--error);
+                        }
+                    }
+                }
+                textarea {
+                    background-color: var(--blue);
+                    @include adaptiveFont(20, 16);
+                    @include adaptiveProperty(padding, 20, 10);
+                    color: var(--white);
+                    width: 100%;
+                    border: 2px solid var(--gold);
+                    &.error {
+                        border: 2px solid var(--red);
+                        background-color: var(--error);
+                    }
+                }
+            }
+        }
+    }
+}

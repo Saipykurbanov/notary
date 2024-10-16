@@ -73,6 +73,25 @@ const en = {
             },
         ],
         button: 'Other accounting services',
+    },
+    contacts: {
+        title: 'Contact us',
+        offer: 'We are looking forward to hearing from you soon',
+        placeholders: {
+            name: 'NAME',
+            email: 'EMAIL',
+            phone: 'PHONE',
+            address: 'ADDRESS',
+            message: 'MESSAGE',
+        },
+        address: {
+            title: 'Address',
+            companyName: 'Company "YourC"',
+            street: '275 7th Ave',
+            floor: '7th Floor',
+            city: 'New York',
+            country: 'NY USA'
+        }
     }
 }
 

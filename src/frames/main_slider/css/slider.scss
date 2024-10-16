@@ -21,7 +21,7 @@
     }
     .container.wrapper {
         position: relative;
-        gap: 10dvh; 
+        gap: 10dvw; 
         margin: auto;
         z-index: 2;
         align-items: normal;
@@ -63,16 +63,6 @@
                     word-break: break-word;
                     hyphens: auto;
                     padding: 5px 0;
-                    &::-webkit-scrollbar {
-                        width: 5px;
-                    }
-                    &::-webkit-scrollbar-track {
-                        
-                    }
-                    &::-webkit-scrollbar-thumb {
-                        background-color: var(--gold);
-                        border-radius: 10px;
-                    }
                 }
             }
             .button_block {

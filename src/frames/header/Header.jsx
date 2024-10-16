@@ -5,7 +5,7 @@ import Button from '../../components/button/Button';
 const Header = ({lang}) => {
     return (
         <header>
-            <div className="container padding">
+            <div className="container">
                 <div className="logo">LOGO.</div>
                 <nav>
                     <a href="">{lang.links.home}</a>

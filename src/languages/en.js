@@ -52,6 +52,27 @@ const en = {
             },
         ],
         button: 'Other accounting services',
+    },
+    footer: {
+        slogan: 'Slogan company',
+        services: {
+            title: 'services',
+            items: [
+                'Text Preaparation',
+                'ITIN Service',
+                'Notary Service',
+                'Auditing Service',
+            ]
+        },
+        navigation: {
+            button: 'BACK TO UP',
+            links: {
+                aboutUs: 'about us',
+                services: 'services',
+                contactUs: 'contact us'
+            }
+        },
+        copyright: '©Copyright All rights reserved.',
     }
 }
 

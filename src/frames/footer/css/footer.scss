@@ -1,0 +1,165 @@
+@import './../../../style/common';
+
+footer {
+    width: 100%;
+    background: var(--black);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .footer__content {
+            display: flex;
+            justify-content: space-between;
+            gap: 70px 30px;
+
+            @include mediaMaxWidth(600) {
+                flex-wrap: wrap;
+            }
+
+            .logo__container {
+                flex: 1;
+
+                & h2 {
+                    @include adaptiveFont(60, 47);
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+
+                & p{
+                    @include adaptiveFont(30, 27);
+                    line-height: 1;
+                }
+
+                @include mediaMaxWidth(450) {
+                    text-align: center;
+                }
+            }
+
+            .services {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+
+                & h3 {
+                    @include adaptiveFont(20, 18);
+                    line-height: 1;
+                    text-transform: uppercase;
+                }
+
+                & p {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+
+                @include mediaMaxWidth(600) {
+                    order: 3;
+                    flex: 1 100%;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    & h3 {
+                        flex: 1 100%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & nav {
+                flex: 1;
+                display: flex;
+                align-items: end;
+                flex-direction: column;
+                gap: 20px;
+
+                .up__button {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    @include adaptiveFont(20, 18);
+                    line-height: 1;
+                    transition: 0.3s;
+
+                    & svg {
+                        width: 13.5px;
+                        & path {
+                            transition: 0.4s;
+                        }
+                    }
+
+                    @include mediaMinWidth(992) {
+                        &:hover {
+                            color: var(--gold);
+
+                            & svg {
+
+                                & path {
+                                    stroke: var(--gold);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nav_items {
+                    position: relative;
+                    display: block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    transition: 0.4s;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        height: 1px;
+                        width: 0;
+                        transition: 0.4s;
+                        background: var(--gold);
+                    }
+
+                    @include mediaMinWidth(992) {
+                        &:hover {
+                            color: var(--gold);
+                            
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                @include mediaMaxWidth(450) {
+                    flex: 1 100%;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    & .up__button {
+                        justify-content: center;
+                        width: max-content;
+                        flex: 1 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .line {
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .copyright {
+            @include adaptiveFont(25, 20);
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

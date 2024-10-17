@@ -4,6 +4,7 @@ import MainSlider from './frames/main_slider/MainSlider';
 import en from './languages/en';
 import About from './frames/about/About';
 import Services from './frames/services/Services';
+import Footer from './frames/footer/Footer';
 import Contacts from './frames/contacts/Contacts';
 import Menu from './frames/menu/Menu';
 import Loading from './components/loading/Loading';
@@ -28,6 +29,8 @@ function App() {
       <Contacts lang={lang.contacts}/>
 
       <Menu lang={lang.header}/>
+        
+      <Footer lang={lang.footer}/>
 
     </main>
   )

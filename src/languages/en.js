@@ -8,8 +8,29 @@ const en = {
         },
         button: "Contacts"
     },
-    slider: {
-
+    home: {
+        slider: [
+            {
+                title: 'Notary Organization',
+                description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals.',
+                button: 'Contacts',
+                link: '/#contacts'
+            },
+            {
+                title: 'Notary Organization2',
+                description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals. At Empire Tax Advisors, we understand that managing your finances can be a daunting task.',
+                button: 'Our services',
+                link: '/#services'
+            },
+        ],
+        specialist: {
+            name: 'Yessica Guevara',
+            position: 'Tax Advisor'
+        },
+        contacts: {
+            phone: '+78881115555',
+            email: 'notaryServices@gmail.com'
+        }
     },
     about: {
         title: 'About us',
@@ -53,6 +74,25 @@ const en = {
         ],
         button: 'Other accounting services',
     },
+    contacts: {
+        title: 'Contact us',
+        offer: 'We are looking forward to hearing from you soon',
+        placeholders: {
+            name: 'NAME',
+            email: 'EMAIL',
+            phone: 'PHONE',
+            address: 'ADDRESS',
+            message: 'MESSAGE',
+        },
+        address: {
+            title: 'Address',
+            companyName: 'Company "YourC"',
+            street: '275 7th Ave',
+            floor: '7th Floor',
+            city: 'New York',
+            country: 'NY USA'
+        }
+    },
     footer: {
         slogan: 'Slogan company',
         services: {
@@ -73,7 +113,7 @@ const en = {
             }
         },
         copyright: '©Copyright All rights reserved.',
-    }
+    },
 }
 
 export default en;

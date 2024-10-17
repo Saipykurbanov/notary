@@ -3,11 +3,13 @@
 
 :root {
     --main-font: "Source Sans 3", sans-serif;
-    --blue: #000520;
+    --blue: #131313;
     --white: #fff;
     --gold: #dfad60;
     --black: #131313;
     --grey: #323232;
+    --red: red;
+    --error: rgb(24, 3, 3);
 }
 
 /*---------- Обнуление --------*/
@@ -31,7 +33,7 @@ html,body{
 	max-width: 100%;
 	min-width: 320px;
 	font-weight: 400;
-	line-height: 1em;
+	line-height: 1;
 	font-size: 14px;
     font-family: var(--main-font);
 	-ms-text-size-adjust: 100%;
@@ -84,6 +86,17 @@ input:-webkit-autofill:focus {
     } 
 }
 
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 10px;
+}
+
 .gold_title {
     @include adaptiveFont(50, 37);
     color: var(--gold);
@@ -91,3 +104,20 @@ input:-webkit-autofill:focus {
     text-transform: uppercase;
 }
 
+@keyframes Open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes OpenSlide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

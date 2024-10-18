@@ -73,8 +73,37 @@ const ru = {
                 title: 'Tax Preparation',
                 fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
             },
+            {
+                title: 'Auditing Service2',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+            {
+                title: 'Tax Preparation2',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
+            {
+                title: ' ITIN Service',
+                fill: 'We provide the latest strategies to help you save thousands in your taxes and save you from the headache of navigating it all yourself.',
+            },
         ],
         button: 'Other accounting services',
+        allServicesTitle: 'All services',
+        allServicesFill: `
+            Make the process of notarizing your documents 
+            simple and stress free with NYC Mobile Notary Service.
+              Our Mobile Notaries travel to the location of your choice 
+              – home, office, hotel, airport, nursing home, hospital, 
+              restaurant, coffee shop, etc. Just have your valid ID and 
+              documents ready and we can perform our notarial services, 
+              which include: witnessing the signing of sensitive documents, 
+              identifying participants, and administering oaths when necessary.
+        `,
+        documentsTitle: 'Acceptable Certified Documents',
+        documentsFill: 'You must have at least one (1) of these Certified Identification documents to receive services:',
+        documentsItems: [
+            'Driver License',
+            'Passport',
+        ]
     },
     contacts: {
         title: 'Contact us',

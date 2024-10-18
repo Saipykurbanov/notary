@@ -179,6 +179,7 @@
 
         .all_services_item {
             @include adaptiveFont(18, 16);
+            margin-bottom: 20px;
         }
 
         .line {

@@ -3,6 +3,7 @@ import './css/services.css';
 import Button from '../../components/button/Button';
 
 const Services = ({ lang }) => {
+    console.log(lang)
     const list = lang?.items?.length > 6 ? lang?.items?.slice(0, 6) : lang?.items
     const servicesContainer = useRef(null)
     const services = useRef(null)
@@ -41,6 +42,7 @@ const Services = ({ lang }) => {
             <div className='services_block' id='#services'>
                 <div className="container padding">
                     <h2 className="gold_title">{lang.title}</h2>
+
                     <div className="service__wrapper">
                         <div className="service__grid">
 
@@ -76,8 +78,8 @@ const Services = ({ lang }) => {
                         </p>
 
                         <div className="all_services_list">
-                            {lang?.items?.map(el => (
-                                <div className='all_services_item_wrapper'>
+                            {lang?.items?.map((el, i) => (
+                                <div className='all_services_item_wrapper' key={i}>
                                     <div className="all_services_item">{el.title}</div>
                                     <div className="line"></div>
                                 </div>
@@ -98,11 +100,11 @@ const Services = ({ lang }) => {
                     <p className="description">{lang.documentsFill}</p>
 
                     <div className="all_services_list">
-                        {lang?.documentsItems?.map(el => (
-                            <>
+                        {lang?.documentsItems?.map((el, i) => (
+                            <div key={i}>
                                 <div className="all_services_item">{el}</div>
                                 <div className="line"></div>
-                            </>
+                            </div>
                         ))}
                     </div>
                 </div>

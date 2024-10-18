@@ -251,6 +251,9 @@
          column-gap: calc(15px + 5 * 0.0520833333vw);
   }
 }
+.documents .all_services_list .all_services_item {
+  margin-bottom: 20px;
+}
 @media (max-width: 768px) {
   .documents .all_services_list .all_services_item {
     font-size: calc(16px + 3.4 * (100vw - 320px) / 1920);

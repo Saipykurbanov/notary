@@ -3,7 +3,7 @@ import './css/about.css';
 
 const About = ({lang}) => {
     return (
-        <div className='about_block'>
+        <div className='about_block' id='about'>
 
             <div className="description_wrapper">
                 <div className="description">

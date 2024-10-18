@@ -8,6 +8,7 @@
   border: 1px solid var(--gold);
   text-transform: uppercase;
   overflow: hidden;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .main_button {

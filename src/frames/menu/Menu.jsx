@@ -31,10 +31,10 @@ const Menu = ({lang}) => {
     return (
         <div className={`menu ${isOpen}`} onMouseDown={(e) => e.stopPropagation()}>
             <nav>
-                <a href="#" onMouseDown={close}>{lang.links.home}</a>
-                <a href="#" onMouseDown={close}>{lang.links.about}</a>
-                <a href="#" onMouseDown={close}>{lang.links.services}</a>
-                <a href="#contacts" onMouseDown={close}>{lang.links.contacts}</a>
+                <a href="#" onClick={close}>{lang.links.home}</a>
+                <a href="#about" onClick={close}>{lang.links.about}</a>
+                <a href="#services" onClick={close}>{lang.links.services}</a>
+                <a href="#contacts" onClick={close}>{lang.links.contacts}</a>
             </nav>
         </div>
     );

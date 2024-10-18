@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import SlideItem from './SlideItem';
 import ButtonBlock from './ButtonBlock';
 
 const Slider = ({slider}) => {
 
     const [page, setPage] = useState(1)
+    const track = useRef(null)
 
     const nextPage = () => {
         if(page > slider.length - 1) {
@@ -23,12 +24,18 @@ const Slider = ({slider}) => {
     }
 
     return (
-        <div className="slider">
-            {slider?.length ?
-                slider.map((el, i) => (
-                    <SlideItem key={i} el={el} page={page} number={i+1}/>
-                ))
-            :<></>}
+        <div className="slider_wrapper">
+            <div className="slider">
+                <div className="slider_track" ref={track} style={{transform: `translateX(${-((page - 1) * 100)}%)`}}>
+                    {slider?.length ?
+                    <>
+                        {slider.map((el, i) => (
+                            <SlideItem key={i} el={el} page={page} number={i+1}/>
+                        ))}
+                    </>
+                    :<></>}
+                </div>
+            </div>
             <ButtonBlock nextPage={nextPage} prevPage={prevPage}/>
         </div>
     );

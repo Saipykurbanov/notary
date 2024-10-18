@@ -22,14 +22,16 @@ const en = {
                 button: 'Our services',
                 link: '/#services'
             },
+            {
+                title: 'Notary Organization3',
+                description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals. At Empire Tax Advisors, we understand that managing your finances can be a daunting task.',
+                button: 'Our services',
+                link: '/#services'
+            },
         ],
         specialist: {
             name: 'Yessica Guevara',
             position: 'Tax Advisor'
-        },
-        contacts: {
-            phone: '+78881115555',
-            email: 'notaryServices@gmail.com'
         }
     },
     about: {
@@ -91,6 +93,12 @@ const en = {
             floor: '7th Floor',
             city: 'New York',
             country: 'NY USA'
+        },
+        button: 'SEND',
+        error: {
+            require: 'This field is required.',
+            phoneValidate: 'A phone number cannot contain less than 10 characters.',
+            emailValidate: 'Please enter valid Email.'
         }
     },
     footer: {

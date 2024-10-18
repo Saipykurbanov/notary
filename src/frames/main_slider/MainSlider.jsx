@@ -16,7 +16,7 @@ const MainSlider = ({lang}) => {
                 <Specialist specialist={lang.specialist}/>
             </div>
 
-            <Contacts contacts={lang.contacts}/>
+            <Contacts />
         </div>
     );
 };

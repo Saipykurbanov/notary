@@ -8,6 +8,7 @@
     text-transform: uppercase;
     @include adaptiveFont(16, 14);
     overflow: hidden;
+    z-index: 2;
     &.white {
         color: var(--white);
     }

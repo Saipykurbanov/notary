@@ -59,6 +59,9 @@ header {
             align-items: center;
             gap: 20px;
             margin-left: auto;
+            @include mediaMaxWidth(768) {
+                gap: 0px;
+            }
             .mob {
                 @include mediaMaxWidth(768) {
                     display: none;
@@ -77,6 +80,7 @@ header {
                     cursor: pointer;
                     color: var(--white);
                     @include adaptiveFont(18, 15);
+                    text-transform: uppercase;
                     svg {
                         position: relative;
                         transition: 0.4s;
@@ -110,6 +114,7 @@ header {
                         transition: 0.4s;
                         transition-delay: 0s;
                         p {
+                            text-transform: uppercase;
                             cursor: pointer;
                             @include adaptiveFont(18, 15);
                         }

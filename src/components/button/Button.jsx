@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/button.css';
 
-const Button = ({mode, content, callback}) => {
+const Button = ({mode, content, type}) => {
     return (
-        <button className={`main_button ${mode}`} onClick={callback}>
+        <button type={type} className={`main_button ${mode}`}>
             <div className="content">
                 {content}
             </div>

@@ -2,6 +2,8 @@
 
 .contacts_frame {
     width: 100%;
+    margin-top: -100px;
+    padding-top: 100px;
     .container {
         .offer {
             @include adaptiveProperty(margin-top, 40, 20);
@@ -16,19 +18,17 @@
                 gap: 20px;
             }
             @include mediaMaxWidth(768) {
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
             .address {
+                // @include mediaMaxWidth(768) {
+                //     display: none;
+                // }
                 color: var(--blue);
                 .address_wrapper {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    @include mediaMaxWidth(768) {
-                        flex-wrap: wrap;
-                        flex-direction: row;
-                        justify-content: space-around;
-                    }
                     h3 {
                         @include adaptiveFont(30, 25);
                         margin-bottom: 5px;
@@ -45,10 +45,6 @@
                     align-items: center;
                     @include adaptiveProperty(gap, 20, 10);
                     @include adaptiveProperty(margin-top, 30, 20);
-                    @include mediaMaxWidth(768) {
-                        width: 100%;    
-                        justify-content: center;
-                    }
                 }   
             }
 
@@ -58,23 +54,33 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     @include adaptiveProperty(column-gap, 50, 10);
-                    @include adaptiveProperty(row-gap, 25, 10);
-                    @include adaptiveProperty(margin-bottom, 25, 10);
+                    @include adaptiveProperty(row-gap, 20, 10);
+                    @include adaptiveProperty(margin-bottom, 20, 10);
                     @include mediaMaxWidth(556) {
                         grid-template-columns: 1fr;
                     }
-                    input {
-                        background-color: var(--blue);
-                        border: 2px solid var(--gold);
-                        @include adaptiveFont(20, 16);
-                        @include adaptiveProperty(padding, 20, 10);
-                        color: var(--white);
-                        transition: 0.4s;
-                        &.error {
-                            border: 2px solid var(--red);
-                            background-color: var(--error);
+                    .input_field {
+                        input {
+                            width: 100%;
+                            background-color: var(--blue);
+                            border: 2px solid var(--gold);
+                            @include adaptiveFont(20, 16);
+                            @include adaptiveProperty(padding, 20, 10);
+                            color: var(--white);
+                            transition: 0.4s;
+                            margin-bottom: 3px;
+                            &.error {
+                                border: 2px solid var(--red);
+                                background-color: var(--error);
+                            }
                         }
                     }
+                }
+                .error_mess {
+                    font-size: 14px;
+                    color: var(--red);
+                    min-height: 14px;
+                    transition: 0.4s;
                 }
                 textarea {
                     background-color: var(--blue);
@@ -83,9 +89,19 @@
                     color: var(--white);
                     width: 100%;
                     border: 2px solid var(--gold);
+                    transition: 0.4s;
                     &.error {
                         border: 2px solid var(--red);
                         background-color: var(--error);
+                    }
+
+                }
+                button {
+                    display: block;
+                    margin-left: auto;
+                    margin-top: 15px;
+                    @include mediaMaxWidth(768) {
+                        margin-right: auto;
                     }
                 }
             }

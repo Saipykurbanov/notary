@@ -27,14 +27,14 @@ const Header = ({lang}) => {
             <div className="container">
                 <div className="logo">LOGO.</div>
                 <nav>
-                    <a href="">{lang.links.home}</a>
-                    <a href="">{lang.links.about}</a>
-                    <a href="">{lang.links.services}</a>
+                    <a href="#">{lang.links.home}</a>
+                    <a href="#about">{lang.links.about}</a>
+                    <a href="#services">{lang.links.services}</a>
                     <a href="#contacts">{lang.links.contacts}</a>
                 </nav>
                 <div className="button_block">
                     <Switch />
-                    <Button mode={'white mob'} content={lang.button}/>
+                    <a href="#contacts"><Button mode={'white mob'} content={lang.button}/></a>
                 </div>
                 <div className={`burger ${isOpen ? 'cross' : ''}`} onMouseDown={isOpen ? close : (e) => open(e)}>
                     <span></span><span className='bottom'></span>

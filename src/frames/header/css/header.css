@@ -75,6 +75,11 @@ header .container .button_block {
   margin-left: auto;
 }
 @media screen and (max-width: 768px) {
+  header .container .button_block {
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
   header .container .button_block .mob {
     display: none;
   }
@@ -92,6 +97,7 @@ header .container .button_block .lang_switch .switch_btn {
   gap: 5px;
   cursor: pointer;
   color: var(--white);
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
   header .container .button_block .lang_switch .switch_btn {
@@ -137,6 +143,7 @@ header .container .button_block .lang_switch .switch_list .switch_list_wrapper {
   transition-delay: 0s;
 }
 header .container .button_block .lang_switch .switch_list .switch_list_wrapper p {
+  text-transform: uppercase;
   cursor: pointer;
 }
 @media (max-width: 768px) {

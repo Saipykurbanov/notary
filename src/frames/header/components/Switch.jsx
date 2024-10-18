@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 const Switch = () => {
 
     const [isOpen, setIsOpen] = useState(false)
+
+    const obj = {en: 'en', ru: 'ru', esp: 'esp'}
     const [lang, setLang] = useState(() => {
-        const lang = localStorage.getItem('language') || 'ENG'
+        const lang = obj[window.location.pathname.split('/')[1]] || obj[navigator.language] || 'en'
         return lang
     })
-
-    const langList = ['RU', 'ENG', 'ESP']
 
     const toggle = (e) => {
         e.stopPropagation()
@@ -23,9 +23,8 @@ const Switch = () => {
         setIsOpen(false)
     }
 
-    const switchLang = (value) => {
-        close()
-        setLang(value)
+    const localSwitch = (path) => {
+        window.location.href = `/${path}`
     }
 
     useEffect(() => {
@@ -52,8 +51,8 @@ const Switch = () => {
 
             <div className={`switch_list ${isOpen ? 'active' : ''}`} onMouseDown={(e) => e.stopPropagation()}>
                 <div className="switch_list_wrapper">
-                    {langList.filter(item => item !== lang).map((el, i) => (
-                        <p key={i} onMouseDown={(e) => switchLang(el)}>{el}</p>
+                    {Object.keys(obj).filter(item => item !== lang).map((el, i) => (
+                        <p key={i} onMouseDown={(e) => localSwitch(el)}>{el}</p>
                     ))}
                 </div>
             </div>

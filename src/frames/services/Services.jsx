@@ -41,7 +41,6 @@ const Services = ({ lang }) => {
             <div className='services_block' id='#services'>
                 <div className="container padding">
                     <h2 className="gold_title">{lang.title}</h2>
-
                     <div className="service__wrapper">
                         <div className="service__grid">
 

@@ -38,8 +38,8 @@ const Services = ({ lang }) => {
     }, [timer.current])
 
     return (
-        <div className='services_wrapper'>
-            <div className='services_block' id='#services'>
+        <div className='services_wrapper' id='services'>
+            <div className='services_block' >
                 <div className="container padding">
                     <h2 className="gold_title">{lang.title}</h2>
 
@@ -69,7 +69,7 @@ const Services = ({ lang }) => {
             </div>
 
             {lang?.items?.length > 6 ? 
-                <div className="all_services" id='services' ref={services}>
+                <div className="all_services" id='all_services' ref={services}>
                     <div className="container padding" ref={servicesContainer}>
                         <h2 className="gold_title">{lang.allServicesTitle}</h2>
 

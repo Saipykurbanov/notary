@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /*-------------Миксины----------------*/
 .services_wrapper {
-  background: var(--black);
+  margin-top: -10dvh;
+  padding-top: 10dvh;
 }
 
 .services_block {

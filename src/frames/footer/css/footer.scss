@@ -24,7 +24,10 @@ footer {
                 & h2 {
                     @include adaptiveFont(60, 47);
                     line-height: 1;
+                }
+                img {
                     margin-bottom: 10px;
+                    @include adaptiveProperty(width, 200, 150);
                 }
 
                 & p{

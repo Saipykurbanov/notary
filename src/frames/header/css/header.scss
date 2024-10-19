@@ -14,8 +14,8 @@ header {
         justify-content: space-between;
         gap: 15px;
         .logo {
-            width: max-content;
-            font-size: 50px;
+            display: block;
+            @include adaptiveProperty(width, 160, 100);
             margin-right: auto;
         }
         nav {

@@ -24,7 +24,6 @@ footer .container .footer__content .logo__container {
 }
 footer .container .footer__content .logo__container h2 {
   line-height: 1;
-  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   footer .container .footer__content .logo__container h2 {
@@ -34,6 +33,19 @@ footer .container .footer__content .logo__container h2 {
 @media (min-width: 768px) {
   footer .container .footer__content .logo__container h2 {
     font-size: calc(47px + 13 * 0.0520833333vw);
+  }
+}
+footer .container .footer__content .logo__container img {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  footer .container .footer__content .logo__container img {
+    width: calc(150px + 85 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  footer .container .footer__content .logo__container img {
+    width: calc(150px + 50 * 0.0520833333vw);
   }
 }
 footer .container .footer__content .logo__container p {

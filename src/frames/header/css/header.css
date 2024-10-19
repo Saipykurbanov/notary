@@ -16,10 +16,18 @@ header .container {
   gap: 15px;
 }
 header .container .logo {
-  width: -moz-max-content;
-  width: max-content;
-  font-size: 50px;
+  display: block;
   margin-right: auto;
+}
+@media (max-width: 768px) {
+  header .container .logo {
+    width: calc(100px + 102 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  header .container .logo {
+    width: calc(100px + 60 * 0.0520833333vw);
+  }
 }
 header .container nav {
   width: 100%;

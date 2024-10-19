@@ -11,7 +11,7 @@ const Loading = () => {
         let timer;
 
         timer = setTimeout(() => {
-            setLoad('close')
+           setLoad('close')
         }, 3000)
 
         return () => {
@@ -23,7 +23,7 @@ const Loading = () => {
     return (
         <div className={`loading ${load}`}>
             <div className="load_wrapper">
-                <div className="logo">LOGO.</div>
+                <img src="/images/logo.svg" alt="" className="logo" />
                 <p className="name">Yessica Guevara</p>
             </div>
         </div>

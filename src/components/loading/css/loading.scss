@@ -15,9 +15,10 @@
     transition: 1s cubic-bezier( 0.895, 0.03, 0.685, 0.22 );
     .logo {
         opacity: 0;
-        @include adaptiveFont(100, 50);
         animation: Open 2s forwards;
         //animation-delay: 1s;
+        @include adaptiveProperty(width, 250, 170);
+        margin-bottom: 10px;
     }
     .name {
         position: relative;

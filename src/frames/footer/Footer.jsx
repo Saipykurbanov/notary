@@ -11,8 +11,7 @@ const Footer = ({ lang }) => {
                 <div className="footer__content">
 
                     <div className="logo__container">
-                        <h2>LOGO.</h2>
-
+                        <img src="/images/logo.svg" alt="" />
                         <p>{lang.slogan}</p>
                     </div>
 

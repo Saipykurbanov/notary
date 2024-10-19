@@ -17,15 +17,16 @@
 .loading .logo {
   opacity: 0;
   animation: Open 2s forwards;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .loading .logo {
-    font-size: calc(50px + 85 * (100vw - 320px) / 1920);
+    width: calc(170px + 136 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
   .loading .logo {
-    font-size: calc(50px + 50 * 0.0520833333vw);
+    width: calc(170px + 80 * 0.0520833333vw);
   }
 }
 .loading .name {

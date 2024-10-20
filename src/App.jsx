@@ -35,7 +35,7 @@ function App() {
 
       <Menu lang={data.header}/>
         
-      <Footer lang={data.footer}/>
+      <Footer lang={data.footer} services={data.services.items} links={data.header.links}/>
 
       <FeedBackBtn />
 

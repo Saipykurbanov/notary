@@ -25,7 +25,9 @@ const Header = ({lang}) => {
     return (
         <header>
             <div className="container">
-                <img src="/images/logo.svg" alt="" className="logo" />
+                <a href="#" className='logo'>
+                    <img src="/images/logo.svg" alt="" className="logo" />
+                </a>
                 <nav>
                     <a href="#">{lang.links.home}</a>
                     <a href="#about">{lang.links.about}</a>

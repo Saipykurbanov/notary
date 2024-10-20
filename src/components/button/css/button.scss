@@ -24,6 +24,16 @@
             }
         }
     }
+    &.load_btn {
+        &::before {
+            animation: loadBtn 2s infinite cubic-bezier(0, 0, 0.5, 1.26);
+        }
+    }
+    &.stop_animation {
+        &::before {
+            animation: appearBack 1s ease;
+        }
+    }
     &::before {
         content: '';
         position: absolute;
@@ -46,5 +56,25 @@
     }
     .content {
         transition: 0.5s;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@keyframes loadBtn {
+    0%, 40%{
+        transform: translateX(-101%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes appearBack {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

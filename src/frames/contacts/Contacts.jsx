@@ -5,6 +5,7 @@ import useFeedback from './hooks/useFeedback';
 import Button from '../../components/button/Button';
 import TextArea from './components/TextArea';
 import Addres from './components/Addres';
+import mark from './icons/mark.svg'
 
 
 const Contacts = ({lang}) => {
@@ -31,7 +32,17 @@ const Contacts = ({lang}) => {
                             <Input error={feedback.error.address} type={'text'} placeholder={lang.placeholders.address} value={feedback.input.address} callback={feedback.changeValue} name={'address'}/>
                         </div>
                         <TextArea placeholder={lang.placeholders.message} value={feedback.input.textarea} error={feedback.error.textarea} callback={feedback.changeValue} name={'textarea'}/>
-                        <Button mode={'fill'} content={lang.button} type={'submit'}/>
+                        <Button 
+                            mode={`fill ${feedback.disable ? 'load_btn' : 'stop_animation'}`} 
+                            content={feedback.success === 'success' ? 
+                                <>
+                                    <svg fill="#000000" width="20px"  viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1827.701 303.065 698.835 1431.801 92.299 825.266 0 917.564 698.835 1616.4 1919.869 395.234z" fill-rule="evenodd"/>
+                                    </svg>
+                                </>
+                            :feedback.success === 'error' ? <div className='cross'></div> 
+                            :<span>{lang.button}</span>} 
+                            type={'submit'}/>
                     </form>
                 </div>
             </div>

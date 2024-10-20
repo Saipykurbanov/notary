@@ -227,12 +227,51 @@
   background-color: var(--error);
 }
 .contacts_frame .container .contacts_wrapper form button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-top: 15px;
+  min-height: 44px;
+  width: 120px;
+}
+.contacts_frame .container .contacts_wrapper form button svg {
+  opacity: 0;
+  animation: Open 1s forwards;
 }
 @media screen and (max-width: 768px) {
   .contacts_frame .container .contacts_wrapper form button {
     margin-right: auto;
   }
+}
+.contacts_frame .container .contacts_wrapper form button span {
+  opacity: 0;
+  animation: Open 1s forwards;
+}
+.contacts_frame .container .contacts_wrapper form button .cross {
+  opacity: 0;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  animation: Open 1s forwards;
+}
+.contacts_frame .container .contacts_wrapper form button .cross::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--blue);
+  transform: translateY(-50%) rotate(45deg);
+}
+.contacts_frame .container .contacts_wrapper form button .cross::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--blue);
+  transform: translateY(-50%) rotate(-45deg);
 }/*# sourceMappingURL=contacts.css.map */

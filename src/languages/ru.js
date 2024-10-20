@@ -2,11 +2,11 @@ const ru = {
     header: {
         links: {
             home: "Главная",
-            about: "About",
-            services: "Services",
-            contacts: "Contacts"
+            about: "О нас",
+            services: "Услуги",
+            contacts: "Контакты"
         },
-        button: "Contacts"
+        button: "Контакты"
     },
     home: {
         slider: [
@@ -26,7 +26,7 @@ const ru = {
                 title: 'Notary Organization3',
                 description: 'At Empire Tax Advisors, we understand that managing your finances can be a daunting task, and we’re here to simplify the process for you. Our team of highly trained and experienced accountants are dedicated to helping individuals and businesses alike achieve their financial goals. At Empire Tax Advisors, we understand that managing your finances can be a daunting task.',
                 button: 'Our services',
-                link: '/#services'
+                link: ''
             },
         ],
         specialist: {
@@ -134,12 +134,7 @@ const ru = {
         slogan: 'Slogan company',
         services: {
             title: 'services',
-            items: [
-                'Text Preaparation',
-                'ITIN Service',
-                'Notary Service',
-                'Auditing Service',
-            ]
+            button: 'show more'
         },
         navigation: {
             button: 'BACK TO UP',

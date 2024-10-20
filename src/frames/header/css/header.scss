@@ -15,8 +15,10 @@ header {
         gap: 15px;
         .logo {
             display: block;
-            @include adaptiveProperty(width, 160, 100);
             margin-right: auto;
+            img {
+                @include adaptiveProperty(width, 160, 100);
+            }
         }
         nav {
             width: 100%;

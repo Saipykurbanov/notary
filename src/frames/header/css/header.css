@@ -20,12 +20,12 @@ header .container .logo {
   margin-right: auto;
 }
 @media (max-width: 768px) {
-  header .container .logo {
+  header .container .logo img {
     width: calc(100px + 102 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  header .container .logo {
+  header .container .logo img {
     width: calc(100px + 60 * 0.0520833333vw);
   }
 }

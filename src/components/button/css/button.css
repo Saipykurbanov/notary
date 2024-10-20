@@ -31,6 +31,12 @@
     transform: translateX(100%);
   }
 }
+.main_button.load_btn::before {
+  animation: loadBtn 2s infinite cubic-bezier(0, 0, 0.5, 1.26);
+}
+.main_button.stop_animation::before {
+  animation: appearBack 1s ease;
+}
 .main_button::before {
   content: "";
   position: absolute;
@@ -53,4 +59,23 @@
 }
 .main_button .content {
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes loadBtn {
+  0%, 40% {
+    transform: translateX(-101%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes appearBack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=button.css.map */

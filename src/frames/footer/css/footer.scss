@@ -58,6 +58,33 @@ footer {
                     line-height: 1;
                 }
 
+                & a {
+                    position: relative;
+                    display: block;
+                    transition: 0.4s;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        height: 1px;
+                        width: 0;
+                        transition: 0.4s;
+                        background: var(--gold);
+                    }
+
+                    @include mediaMinWidth(992) {
+                        &:hover {
+                            color: var(--gold);
+                            
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
                 @include mediaMaxWidth(600) {
                     order: 3;
                     flex: 1 100%;

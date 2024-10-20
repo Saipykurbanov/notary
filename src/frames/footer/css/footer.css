@@ -91,6 +91,29 @@ footer .container .footer__content .services p {
   font-size: 14px;
   line-height: 1;
 }
+footer .container .footer__content .services a {
+  position: relative;
+  display: block;
+  transition: 0.4s;
+}
+footer .container .footer__content .services a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  transition: 0.4s;
+  background: var(--gold);
+}
+@media screen and (min-width: 992px) {
+  footer .container .footer__content .services a:hover {
+    color: var(--gold);
+  }
+  footer .container .footer__content .services a:hover:before {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   footer .container .footer__content .services {
     order: 3;

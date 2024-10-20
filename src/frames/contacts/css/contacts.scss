@@ -60,6 +60,7 @@
                         grid-template-columns: 1fr;
                     }
                     .input_field {
+
                         input {
                             width: 100%;
                             background-color: var(--blue);
@@ -97,11 +98,51 @@
 
                 }
                 button {
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin-left: auto;
                     margin-top: 15px;
+                    min-height: 44px;
+                    width: 120px;
+
+                    & svg {
+                        opacity: 0;
+                        animation: Open 1s forwards;
+                    }
                     @include mediaMaxWidth(768) {
                         margin-right: auto;
+                    }
+                    & span {
+                        opacity: 0;
+                        animation: Open 1s forwards;
+                    }
+                    .cross {
+                        opacity: 0;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        animation: Open 1s forwards;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: var(--blue);
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: var(--blue);
+                            transform: translateY(-50%) rotate(-45deg);
+                        }
                     }
                 }
             }

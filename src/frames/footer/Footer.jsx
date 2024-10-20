@@ -3,7 +3,7 @@ import './css/footer.css';
 
 import arrow from './icons/arrow.svg'
 
-const Footer = ({ lang }) => {
+const Footer = ({ lang, services }) => {
     return (
         <footer>
             <div className="container padding">
@@ -18,9 +18,11 @@ const Footer = ({ lang }) => {
                     <div className="services">
                         <h3>{lang.services.title}</h3>
 
-                        {lang?.services?.items?.map((el, i) => (
-                            <p key={i}>{el}</p>
+                        {services?.slice(0,4).map((el, i) => (
+                            <p key={i}>{el.title}</p>
                         ))}
+
+                        {services.length > 4 ? <a href='#services' className="">{lang.services.button}</a> :<></>}
                     </div>
 
                     <nav>

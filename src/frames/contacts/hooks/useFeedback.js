@@ -22,6 +22,7 @@ export default function useFeedback(errors) {
     })
 
     const changeValue = (value, type) => {
+        setSuccess(prev => prev === false ? prev : false)
 
         if(type === 'textarea') {
             if(value.length > 300) return
@@ -79,6 +80,8 @@ export default function useFeedback(errors) {
     }
 
     var onPhonePaste = function (e) {
+        setSuccess(prev => prev === false ? prev : false)
+
         var input = e.target,
             inputNumbersValue = getInputNumbersValue(input);
         var pasted = e.clipboardData || window.clipboardData;
@@ -92,6 +95,7 @@ export default function useFeedback(errors) {
     }
 
     var onPhoneInput = function (e) {
+        setSuccess(prev => prev === false ? prev : false)
 
         var input = e.target,
         inputNumbersValue = getInputNumbersValue(input),
@@ -137,6 +141,7 @@ export default function useFeedback(errors) {
     }
 
     var onPhoneKeyDown = function (e) {
+        setSuccess(prev => prev === false ? prev : false)
 
         var inputValue = e.target.value.replace(/\D/g, '');
         if (e.keyCode == 8 && inputValue.length == 1) {
@@ -150,7 +155,6 @@ export default function useFeedback(errors) {
         if(disable) {
             return
         }
-
         
         let errorChange = 0
         
@@ -184,7 +188,23 @@ export default function useFeedback(errors) {
         let res = await Api.post('feedback', input)
 
         if(res === 'success') {
-            setSuccess(prev => prev = true)
+            setSuccess('success')
+            setError({
+                name: undefined,
+                email: undefined,
+                phone: undefined,
+                address: undefined,
+                textarea: undefined
+            })
+            setInput({
+                name: undefined,
+                email: undefined,
+                phone: undefined,
+                address: undefined,
+                textarea: undefined
+            })
+        } else {
+            setSuccess('error')
         }
 
         setDisable(prev => prev = false)

@@ -23,7 +23,7 @@ const Loading = () => {
     return (
         <div className={`loading ${load}`}>
             <div className="load_wrapper">
-                <img src="/images/logo.svg" alt="" className="logo" />
+                <img src="/images/logo2.jpg" alt="" className="logo" />
                 <p className="name">Yessica Guevara</p>
             </div>
         </div>

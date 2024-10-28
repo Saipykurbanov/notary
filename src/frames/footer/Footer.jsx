@@ -11,8 +11,7 @@ const Footer = ({ lang, services }) => {
                 <div className="footer__content">
 
                     <div className="logo__container">
-                        <img src="/images/logo.svg" alt="" />
-                        <p>{lang.slogan}</p>
+                        <img src="/images/logo2.jpg" alt="" />
                     </div>
 
                     <div className="services">

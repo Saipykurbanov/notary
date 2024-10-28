@@ -14,9 +14,10 @@ const About = ({lang}) => {
             </div>
 
             <div className="offer_block">
-                <div className="logo">YOUR LOGO</div>
+                {/* <div className="logo">YOUR LOGO</div>
 
-                <div className="offer">{lang.offer}</div>
+                <div className="offer">{lang.offer}</div> */}
+                <img className='logo' src="/images/logo2.jpg" alt="" />
             </div>
             
         </div>

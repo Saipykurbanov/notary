@@ -38,13 +38,12 @@
     }
 
     .offer_block {
-        min-height: 50dvh;
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
-        background: var(--grey);
+        background: var(--blue);
         font-size: 64px;
         @include adaptiveFont(64, 50);
         line-height: 1;
@@ -52,13 +51,21 @@
         flex-direction: column;
         @include adaptiveProperty(padding-left, 30, 16); 
         @include adaptiveProperty(padding-right, 30, 16); 
+        padding-top: 8svh;
+        padding-bottom: 8dvh;
 
         .logo {
-
+            width: 100%;
+            max-width: 700px;
+            pointer-events: none;
         }
 
         .offer {
 
+        }
+
+        @include mediaMinWidth(700) {
+            min-height: 50dvh;
         }
     }
 }

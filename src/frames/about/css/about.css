@@ -90,17 +90,18 @@
   }
 }
 .about_block .offer_block {
-  min-height: 50dvh;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background: var(--grey);
+  background: var(--blue);
   font-size: 64px;
   line-height: 1;
   color: var(--gold);
   flex-direction: column;
+  padding-top: 8svh;
+  padding-bottom: 8dvh;
 }
 @media (max-width: 768px) {
   .about_block .offer_block {
@@ -130,5 +131,15 @@
 @media (min-width: 768px) {
   .about_block .offer_block {
     padding-right: calc(16px + 14 * 0.0520833333vw);
+  }
+}
+.about_block .offer_block .logo {
+  width: 100%;
+  max-width: 700px;
+  pointer-events: none;
+}
+@media screen and (min-width: 700px) {
+  .about_block .offer_block {
+    min-height: 50dvh;
   }
 }/*# sourceMappingURL=about.css.map */

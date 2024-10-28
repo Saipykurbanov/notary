@@ -14,30 +14,53 @@
   justify-content: center;
   transition: 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-.loading .logo {
-  opacity: 0;
-  animation: Open 2s forwards;
-  margin-bottom: 10px;
-}
 @media (max-width: 768px) {
-  .loading .logo {
-    width: calc(170px + 136 * (100vw - 320px) / 1920);
+  .loading {
+    padding-right: calc(20px + 17 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
-  .loading .logo {
-    width: calc(170px + 80 * 0.0520833333vw);
+  .loading {
+    padding-right: calc(20px + 10 * 0.0520833333vw);
   }
 }
+@media (max-width: 768px) {
+  .loading {
+    padding-left: calc(20px + 17 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  .loading {
+    padding-left: calc(20px + 10 * 0.0520833333vw);
+  }
+}
+.loading .logo {
+  opacity: 0;
+  animation: Open 2s forwards;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
 .loading .name {
+  margin-top: 3dvh;
   position: relative;
   opacity: 0;
   transform: translateX(-80%);
   animation: Name 1s forwards;
-  color: var(--gold);
+  color: var(--white);
   width: -moz-max-content;
   width: max-content;
   animation-delay: 1s;
+}
+@media (max-width: 768px) {
+  .loading .name {
+    font-size: calc(16px + 6.8 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 768px) {
+  .loading .name {
+    font-size: calc(16px + 4 * 0.0520833333vw);
+  }
 }
 .loading.close {
   transform: translateY(-100%);
@@ -50,6 +73,6 @@
   }
   100% {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateX(10%);
   }
 }/*# sourceMappingURL=loading.css.map */

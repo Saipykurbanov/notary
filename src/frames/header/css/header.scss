@@ -17,7 +17,7 @@ header {
             display: block;
             margin-right: auto;
             img {
-                @include adaptiveProperty(width, 160, 100);
+                @include adaptiveProperty(width, 240, 150);
             }
         }
         nav {

@@ -2,7 +2,7 @@
 
 footer {
     width: 100%;
-    background: var(--black);
+    background: var(--blue);
 
     .container {
         display: flex;
@@ -27,7 +27,7 @@ footer {
                 }
                 img {
                     margin-bottom: 10px;
-                    @include adaptiveProperty(width, 200, 150);
+                    @include adaptiveProperty(width, 300, 230);
                 }
 
                 & p{

@@ -21,12 +21,12 @@ header .container .logo {
 }
 @media (max-width: 768px) {
   header .container .logo img {
-    width: calc(100px + 102 * (100vw - 320px) / 1920);
+    width: calc(150px + 153 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
   header .container .logo img {
-    width: calc(100px + 60 * 0.0520833333vw);
+    width: calc(150px + 90 * 0.0520833333vw);
   }
 }
 header .container nav {

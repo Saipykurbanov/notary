@@ -13,21 +13,27 @@
     align-items: center;
     justify-content: center;
     transition: 1s cubic-bezier( 0.895, 0.03, 0.685, 0.22 );
+    @include adaptiveProperty(padding-right, 30, 20);
+    @include adaptiveProperty(padding-left, 30, 20);
+
     .logo {
         opacity: 0;
         animation: Open 2s forwards;
         //animation-delay: 1s;
-        @include adaptiveProperty(width, 250, 170);
+        width: 100%;
+        max-width: 600px;
         margin-bottom: 10px;
     }
     .name {
+        margin-top: 3dvh;
         position: relative;
         opacity: 0;
         transform: translateX(-80%);
         animation: Name 1s forwards;
-        color: var(--gold);
+        color: var(--white);
         width: max-content;
         animation-delay: 1s;
+        @include adaptiveFont(20, 16);
     }
     &.close {
         transform: translateY(-100%);
@@ -41,6 +47,6 @@
     }
     100% {
         opacity: 1;
-        transform: translateX(0%);
+        transform: translateX(10%);
     }
 }

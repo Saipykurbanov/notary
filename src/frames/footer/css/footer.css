@@ -2,7 +2,7 @@
 /*-------------Миксины----------------*/
 footer {
   width: 100%;
-  background: var(--black);
+  background: var(--blue);
 }
 footer .container {
   display: flex;
@@ -40,12 +40,12 @@ footer .container .footer__content .logo__container img {
 }
 @media (max-width: 768px) {
   footer .container .footer__content .logo__container img {
-    width: calc(150px + 85 * (100vw - 320px) / 1920);
+    width: calc(230px + 119 * (100vw - 320px) / 1920);
   }
 }
 @media (min-width: 768px) {
   footer .container .footer__content .logo__container img {
-    width: calc(150px + 50 * 0.0520833333vw);
+    width: calc(230px + 70 * 0.0520833333vw);
   }
 }
 footer .container .footer__content .logo__container p {
